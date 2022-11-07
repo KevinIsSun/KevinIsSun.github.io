@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Nice to meet you!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="wb:webmaster" content="9471e8063cf6949a" />
+    <link rel="shortcut icon" href="http://lovejiani.duapp.com/favicon.ico">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+    <style type="text/css">
+			a:link,a:visited{text-decoration:none;}
+		</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript" src="./console.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<!-- <span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">*  遇见你真是一件非常美好的事情</span><br />
+				<span class="space"/><span class="comments">*  希望可以和你有一段开心的故事.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"朴灿烈"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"小敏"</span>);<br />
+				I am <font color="red">Enchanted</font> to meet You<br /> -->
+				<!-- 我爱你 <br /> -->
+
+				to 小敏<br />
+				流香涨腻满晴川 佳人相见一千年
+			</div>
+			<div id="loveHeart">
+			  <canvas id="garden"></canvas>
+				<div id="words">
+					<!-- <div id="messages">
+						to 小敏
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						流香涨腻满晴川 佳人相见一千年 <br/>
+						<div class="signature"> </div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<br>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2011, 06, 23);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "❤  您的浏览器不支持HTML5技术<br/>推荐使用 Chrome/Firefox/Opera 浏览器 喵~ ＞▽＜ "; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	<audio src="tongue.mp3" preload="auto" autoplay></audio>
+	<div style="display:none"><script language="javascript" type="text/javascript" src="http://js.users.51.la/16516095.js"></script>
+<noscript><a href="http://www.51.la/?16516095" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/16516095.asp" style="border:none" /></a></noscript></div>
+</body>
+</html>
